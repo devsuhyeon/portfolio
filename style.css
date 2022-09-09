@@ -1,0 +1,78 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-yellow: #ffdba7;
+  --color-blue: #83a0cf;
+  --color-pink: #ed9392;
+  --color-gray: #a7a7a7;
+  --color-dark-gray: #484848;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 40px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-medium: 500;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  cursor: default;
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: var(--color-black);
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-semi-bold);
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-medium);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  margin: 4px 0;
+}
