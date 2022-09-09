@@ -191,9 +191,30 @@ p {
 }
 
 .section__container {
-  position: relative;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.title__container {
+  position: relative;
+}
+
+.about__title::after,
+.skills__title::after,
+.projects__title::after,
+.contact__title::after {
+  content: '';
+  position: absolute;
+  height: 1.5px;
+  left: 0;
+  right: 0;
+  top: 60px;
+  transform: scaleX(0.05);
+  background-color: var(--color-black);
+}
+
+.contact__title::after {
+  background-color: var(--color-white);
 }
 
 /* About */
@@ -206,7 +227,7 @@ p {
   font-family: 'Quicksand', sans-serif;
   font-weight: var(--weight-medium);
   color: var(--color-dark-gray);
-  margin-top: 48px;
+  margin-top: 72px;
   margin-bottom: 68px;
 }
 
@@ -252,8 +273,8 @@ p {
   height: 100vh;
 }
 
-.skills__title {
-  margin-bottom: 40px;
+#skills .title__container {
+  margin-bottom: 72px;
 }
 
 .skills__items {
@@ -315,6 +336,10 @@ p {
 }
 
 /* Projects */
+#projects .title__container {
+  margin-bottom: 72px;
+}
+
 .project {
   position: relative;
   display: flex;
@@ -375,8 +400,8 @@ p {
   color: var(--color-white);
 }
 
-.contact__title {
-  margin-bottom: 32px;
+#contact .title__container {
+  margin-bottom: 48px;
 }
 
 .contact__email {
