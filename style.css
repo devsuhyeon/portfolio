@@ -178,3 +178,138 @@ p {
   color: var(--color-white);
   background-color: var(--color-dark-gray);
 }
+
+/* Section common*/
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section h1 {
+  text-transform: uppercase;
+}
+
+.section__container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* About */
+#about {
+  padding-bottom: 100px;
+}
+
+.about__description {
+  line-height: 32px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: var(--weight-medium);
+  color: var(--color-dark-gray);
+  margin-top: 48px;
+  margin-bottom: 68px;
+}
+
+.about__education {
+  font-family: 'PT Serif', serif;
+  font-size: 22px;
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-dark-gray);
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.about__university {
+  display: flex;
+  align-items: center;
+}
+
+.university__logo {
+  width: 150px;
+}
+
+.university__description {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--color-dark-gray);
+  text-align: left;
+  margin: 0 16px;
+}
+
+.university__name {
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+}
+
+.university__period {
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+}
+
+/* Skills */
+#skills {
+  background-color: var(--color-yellow);
+  height: 100vh;
+}
+
+.skills__title {
+  margin-bottom: 40px;
+}
+
+.skills__items {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skillset__container {
+  display: flex;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  padding: 30px;
+}
+
+.skillset__left {
+  flex-direction: column;
+  flex-basis: 65%;
+  margin-right: 30px;
+}
+
+.skillset__title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.skillset__list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skillset_frontend {
+  margin-bottom: 48px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill__icon {
+  width: 70px;
+  margin: 0 8px;
+}
+
+.skill__title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  margin-top: 8px;
+}
+
+.skillset__right {
+  flex-direction: column;
+  flex-basis: 35%;
+}
