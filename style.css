@@ -439,6 +439,28 @@ p {
   font-family: 'Quicksand', sans-serif;
 }
 
+/* Arrow up */
+.arrow-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media screen and (max-width: 768px) {
   :root {
     /* Font size */
@@ -549,5 +571,13 @@ p {
   .project_photo {
     width: 250px;
     margin-bottom: 8px;
+  }
+
+  .arrow-up {
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
 }
