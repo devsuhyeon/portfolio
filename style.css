@@ -5,6 +5,7 @@
   --color-yellow: #ffdba7;
   --color-blue: #83a0cf;
   --color-pink: #ed9392;
+  --color-light-gray: #d9d9d9;
   --color-gray: #a7a7a7;
   --color-dark-gray: #484848;
   --color-black: #000000;
@@ -85,7 +86,8 @@ p {
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  padding: 4px 24px;
+  padding: 8px 24px;
+  z-index: 999;
 }
 
 .navbar__logo {
@@ -104,6 +106,7 @@ p {
 
 .navbar__menu {
   display: flex;
+  margin: 8px 0;
 }
 
 .navbar__menu__item {
@@ -113,6 +116,7 @@ p {
   font-weight: var(--weight-medium);
   color: var(--color-dark-gray);
   text-transform: uppercase;
+  border-radius: var(--size-border-radius);
   padding: 4px 0;
   margin: 0 12px;
   cursor: pointer;
@@ -140,6 +144,14 @@ p {
   background-color: var(--color-black);
   transform: scaleX(1);
   visibility: visible;
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  font-size: 20px;
+  display: none;
 }
 
 /* Home */
@@ -425,4 +437,117 @@ p {
 
 .contact__rights {
   font-family: 'Quicksand', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-light-gray);
+  }
+
+  .navbar__logo {
+    margin: 6px 0;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .navbar__menu__item {
+    padding: 6px 0;
+    margin-bottom: 8px;
+  }
+
+  .navbar__menu__item.active,
+  .navbar__menu__item:hover {
+    background-color: var(--color-gray);
+  }
+
+  .navbar__menu__item.active::after,
+  .navbar__menu__item:hover::after {
+    visibility: hidden;
+  }
+
+  #home {
+    height: auto;
+    padding: 16px;
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
+  #about {
+    padding-bottom: 30px;
+  }
+
+  .about__description {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .university__logo {
+    width: 100px;
+  }
+
+  #skills {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  #skills .title__container {
+    margin-bottom: 50px;
+  }
+
+  .skills__items {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .skillset__left {
+    flex-basis: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .skillset__right {
+    flex-basis: auto;
+  }
+
+  .skill__icon {
+    width: 50px;
+    margin: 0 8px;
+  }
+
+  #projects .title__container {
+    margin-bottom: 50px;
+  }
+
+  .project {
+    width: 370px;
+  }
+
+  .project_photo {
+    width: 250px;
+    margin-bottom: 8px;
+  }
 }
