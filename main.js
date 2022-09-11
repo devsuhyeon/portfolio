@@ -55,3 +55,26 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
+
+// Handle project to be activated
+const projects = document.querySelectorAll('.project');
+projects[0].classList.add('active'); // Initially, the first project is active
+let activeProject = projects[0];
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.8,
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      activeProject.classList.remove('active'); // Remove active class from existing active project
+      activeProject = entry.target;
+      activeProject.classList.add('active'); // Add active class to new target project
+    }
+  });
+}, options);
+
+projects.forEach((project) => observer.observe(project));
