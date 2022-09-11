@@ -90,6 +90,10 @@ p {
   z-index: 999;
 }
 
+#navbar.navbar--dark {
+  background-color: var(--color-light-gray);
+}
+
 .navbar__logo {
   display: flex;
   align-items: center;
@@ -122,7 +126,6 @@ p {
   cursor: pointer;
 }
 
-.navbar__menu__item.active,
 .navbar__menu__item:hover {
   color: var(--color-black);
 }
@@ -139,7 +142,6 @@ p {
   visibility: hidden;
 }
 
-.navbar__menu__item.active::after,
 .navbar__menu__item:hover::after {
   background-color: var(--color-black);
   transform: scaleX(1);
@@ -491,17 +493,19 @@ p {
     display: none;
   }
 
+  .navbar__menu.open {
+    display: block;
+  }
+
   .navbar__menu__item {
     padding: 6px 0;
     margin-bottom: 8px;
   }
 
-  .navbar__menu__item.active,
   .navbar__menu__item:hover {
     background-color: var(--color-gray);
   }
 
-  .navbar__menu__item.active::after,
   .navbar__menu__item:hover::after {
     visibility: hidden;
   }
