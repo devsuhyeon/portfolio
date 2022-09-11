@@ -262,10 +262,12 @@ p {
 }
 
 .about__description {
-  line-height: 32px;
+  width: 800px;
+  line-height: 42px;
   font-family: 'Quicksand', sans-serif;
   font-weight: var(--weight-medium);
   color: var(--color-dark-gray);
+  margin: 0 auto;
   margin-top: 72px;
   margin-bottom: 68px;
 }
