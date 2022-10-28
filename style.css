@@ -284,10 +284,22 @@ p {
 .about__university {
   display: flex;
   align-items: center;
+  margin-bottom: 12px;
+}
+
+.university__logo__container {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .university__logo {
   width: 150px;
+}
+
+.university__logo.psb-academy {
+  width: 68px;
 }
 
 .university__description {
